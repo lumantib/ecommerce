@@ -57,10 +57,7 @@ const Navbar = () => {
                     <Logo>Affordable Thrift Store</Logo>
                 </Left>
                 <Center>
-                    <Language>Search</Language>
-                    <SearchContainer className="border-black border">
-                        <input type="text" />
-                    </SearchContainer>
+                    
                 </Center>
                 <Right>
                     <div className='flex gap-4'>
