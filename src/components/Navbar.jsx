@@ -57,20 +57,23 @@ const Navbar = () => {
                     <Logo>Affordable Thrift Store</Logo>
                 </Left>
                 <Center>
-                    
+
                 </Center>
                 <Right>
                     <div className='flex gap-4'>
-                    {
-                        localStorage.getItem("mobile")?
-                        <>Welcome</>
-                        :
-                        <>
-                        <Link to="register">Signup</Link><button
-                            data-te-target="#lumanti" data-te-toggle="modal"
-                        >  Login</button>
-                        </>
-                    }
+                        {
+                            localStorage.getItem("mobile") ?
+                                <div>
+                                    Welcome
+                                    <Link to="seller">Sell item</Link>
+                                </div>
+                                :
+                                <>
+                                    <Link to="register">Signup</Link><button
+                                        data-te-target="#lumanti" data-te-toggle="modal"
+                                    >  Login</button>
+                                </>
+                        }
 
 
 

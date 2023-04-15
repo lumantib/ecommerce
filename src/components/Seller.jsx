@@ -1,12 +1,16 @@
 import React from 'react'
+import Navbar from './Navbar'
+import ItemsList from './Sellers/ItemsList'
 
-const Buyer = () => {
+const Seller = () => {
   return (
-    <div>
-      hello gedes
-      
-    </div>
+    <>
+
+      <Navbar />
+      <ItemsList />
+
+    </>
   )
 }
 
-export default Buyer
+export default Seller
