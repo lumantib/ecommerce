@@ -7,9 +7,11 @@ import Product_women from "./components/Product_women";
 import Login from "./components/Login";
 import Seller from "./components/Seller";
 import { useEffect } from "react";
-import Admin from "./components/Admin";
+import Admin from "./components/Admin/Admin";
 import ItemsAddPage from "./components/Sellers/ItemsAddPage";
 import CheckoutPage from "./components/Checkout/CheckoutPage";
+import Settings from "./components/Admin/Settings";
+import About from "./components/Admin/About";
 
 
 const App = () => {
@@ -30,10 +32,12 @@ const App = () => {
       <Route path="product_kids" element={<Product />} /> */}
       <Route path="register" element={<Register />} />
       <Route path="login" element={<Login />} />
-      <Route path="register/Admin" element={<Admin />} />
+      <Route path="Admin" element={<Admin />} />
       <Route path="seller" element={<Seller />} />
       <Route path="seller/add" element={<ItemsAddPage />} />
-
+      <Route path="settings" element={<Settings/>} />
+      <Route path="about" element={<About/>} />
+    
 
     </Routes>
 

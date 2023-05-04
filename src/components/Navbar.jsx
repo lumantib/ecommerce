@@ -64,8 +64,8 @@ const Navbar = () => {
                         {
                             localStorage.getItem("mobile") ?
                                 <div>
-                                    Welcome
-                                    <Link to="seller">Sell item</Link>
+                                    Welcome || 
+                                    <Link to=" seller">Sell item</Link>
                                 </div>
                                 :
                                 <>
