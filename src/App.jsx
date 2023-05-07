@@ -1,17 +1,17 @@
-import Home from "./pages/Home";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, Route, Routes } from "react-router-dom";
+import About from "./components/Admin/About";
+import AdminWrapper from "./components/Admin/AdminWrapper";
+import Settings from "./components/Admin/Settings";
+import CheckoutPage from "./components/Checkout/CheckoutPage";
+import Login from "./components/Login";
 import Products from "./components/Products";
 import Register from "./components/Register";
-import Product_men from "./components/Product_men";
-import Product_women from "./components/Product_women";
-import Login from "./components/Login";
 import Seller from "./components/Seller";
-import { useEffect } from "react";
-import Admin from "./components/Admin/Admin";
 import ItemsAddPage from "./components/Sellers/ItemsAddPage";
-import CheckoutPage from "./components/Checkout/CheckoutPage";
-import Settings from "./components/Admin/Settings";
-import About from "./components/Admin/About";
+import Home from "./pages/Home";
+import AdminProducts from "./components/Admin/AdminPages/Products/AdminProducts";
+import UserPage from "./components/Admin/AdminPages/Users/UserPage";
 
 
 const App = () => {
@@ -32,16 +32,32 @@ const App = () => {
       <Route path="product_kids" element={<Product />} /> */}
       <Route path="register" element={<Register />} />
       <Route path="login" element={<Login />} />
-      <Route path="Admin" element={<Admin />} />
       <Route path="seller" element={<Seller />} />
       <Route path="seller/add" element={<ItemsAddPage />} />
-      <Route path="settings" element={<Settings/>} />
-      <Route path="about" element={<About/>} />
-    
+      <Route path="settings" element={<Settings />} />
+      <Route path="about" element={<About />} />
+
+      <Route path="admin" element={<LayoutsWithNavbar />}>
+        <Route path="products" element={<AdminProducts />} />
+        <Route path="users" element={<UserPage />} />
+      </Route>
 
     </Routes>
 
   )
 
+  function LayoutsWithNavbar() {
+    return (
+      <>
+        {/* Your navbar component */}
+        <AdminWrapper >
+
+          {/* This Outlet is the place in which react-router will render your components that you need with the navbar */}
+          <Outlet />
+        </AdminWrapper>
+        {/* You can add a footer to get fancy in here :) */}
+      </>
+    );
+  }
 };
 export default App;
