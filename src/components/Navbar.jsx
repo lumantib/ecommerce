@@ -62,9 +62,9 @@ const Navbar = () => {
                 <Right>
                     <div className='flex gap-4'>
                         {
-                            localStorage.getItem("mobile") ?
+                            localStorage.getItem("username") ?
                                 <div>
-                                    Welcome || 
+                                    Welcome ||
                                     <Link to=" seller">Sell item</Link>
                                 </div>
                                 :
